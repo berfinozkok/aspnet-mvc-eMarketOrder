@@ -1,0 +1,15 @@
+﻿@model Category 
+
+<form method="post"> 
+    <h2><b>Create new category</b></h2>
+    <div class= "row">
+        <b><label asp-for ="Name"></label></b>
+        <input asp-for = "Name" class="form-control" />
+    </div>
+    <div class="row my-2">
+        <div class="col-6"><button type="submit" class="btn btn-primary">
+            Kaydet
+        </button> </div>
+        <div class="col-6"> <a asp-controller="Category" asp-action="Index" class="btn btn-primary"> Kategorilere Dön</a> </div>
+    </div>
+</form>

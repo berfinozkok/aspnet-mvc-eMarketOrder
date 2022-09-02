@@ -1,0 +1,23 @@
+﻿@model eMarketOrder.Models.ViewModels.WishListVM
+<div class="row py-2">
+    @foreach(var item in Model.wishLists){
+        <div class="col-lg-3 col-md-6">
+            <div class="row p-1">
+                <div class="col-12 p-1" style="border:1px solid #008000; border-radius:4px">
+                    <div class="card pt-1">
+                        <img src="@Model.WishList.Product.Picture" class="card-img-top rounded" />
+                        <div class="card-body">
+                            <div px-1>
+                                <p class="card-title h6 text-primary"> @Model.WishList.Product.Name</p>
+                                <p class=px-1> @item.Price ₺ </p>
+                            </div>
+                        </div>
+                        <div>
+                            <a asp-action="Remove WishList" class="btn btn-primary form-control" asp-route-productId= "@Model.WishList.ProductId">Kalp</a>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

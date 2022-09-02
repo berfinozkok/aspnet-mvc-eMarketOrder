@@ -1,0 +1,68 @@
+﻿@model eMarketOrder.Models.ViewModels.ProductVM
+<br />
+<h2><b> @(Model.Product.Id <=0 ? "Add": "Update") Product </b></h2>
+
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="Product.Id" type="hidden" />
+    <input asp-for="Product.Picture" type="hidden" />
+
+    @if(@Model != null)
+    {
+        <div class="col-6">
+            <img src="@Model.Product.Picture" width="200px" />
+        </div>
+    }
+
+    <b><div class="row my-1">
+        <label asp-for="Product.Name"></label>
+        <input asp-for="Product.Name" class="form-control"/>
+    </div>
+
+    <div class="row my-1">
+        <label asp-for="Product.Description"></label>
+        <input asp-for="Product.Description" class="form-control"/>
+    </div>
+
+    <div class="row my-1">
+        <label asp-for="Product.Price"></label>
+        <input asp-for="Product.Price" class="form-control"/>
+    </div>
+
+    <div class="row my-1">
+        <label asp-for="Product.Barcode"></label>
+        <input asp-for="Product.Barcode" class="form-control"/>
+    </div>
+
+    <div class="row my-1">
+        <label asp-for="Product.CategoryId"></label>
+        <select asp-for="Product.CategoryId" asp-items="@Model.categories" class="form-control">
+            <option disabled selected> Please choose a category </option>
+        </select>
+    </div>
+
+    <div class="row my-1">
+        <label asp-for="Product.Picture"></label>
+        <input type="file" if="file" name="picfile" accept="image/*" class="form-control"/>
+    </div>
+
+    <div class="row my-1">
+        <label asp-for="Product.QRCode"></label>
+        <input type="file" if="file" name="qrfile" accept="image/*" class="form-control"/>
+    </div>
+
+    <div class="row my-1">
+        <label asp-for="Product.BarcodePic"></label>
+        <input type="file" if="file" name="barfile" accept="image/*" class="form-control"/>
+    </div>
+
+    <div class="row my-1">
+        <label asp-for="Product.IsCount" ></label>
+        <select asp-for="Product.IsCount" class="form-control">
+            <option disabled selected> Select Countable or Not </option>
+            <option value="False">Not</option>
+            <option value="True">Countable</option>
+        </select>
+    </div></b>
+
+    <button type="submit" class="btn btn-primary">@(Model.Product.Id <=0 ? "Add": "Update")</button>
+</form>

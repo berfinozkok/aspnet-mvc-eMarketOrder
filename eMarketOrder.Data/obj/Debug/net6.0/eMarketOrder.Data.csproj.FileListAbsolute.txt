@@ -1,0 +1,15 @@
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\bin\Debug\net6.0\eMarketOrder.Data.deps.json
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\bin\Debug\net6.0\eMarketOrder.Data.dll
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\bin\Debug\net6.0\eMarketOrder.Data.pdb
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\bin\Debug\net6.0\eMarketOrder.Models.dll
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\bin\Debug\net6.0\eMarketOrder.Models.pdb
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\eMarketOrder.Data.csproj.AssemblyReference.cache
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\eMarketOrder.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\eMarketOrder.Data.AssemblyInfoInputs.cache
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\eMarketOrder.Data.AssemblyInfo.cs
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\eMarketOrder.Data.csproj.CoreCompileInputs.cache
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\eMarketOrder.Data.csproj.CopyComplete
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\eMarketOrder.Data.dll
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\refint\eMarketOrder.Data.dll
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\eMarketOrder.Data.pdb
+C:\Users\Berfin\Desktop\JUNIOR_STAJ\proje\eMarketOrder\eMarketOrder.Data\obj\Debug\net6.0\ref\eMarketOrder.Data.dll

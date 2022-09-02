@@ -1,0 +1,119 @@
+﻿@model eMarketOrder.Models.ViewModels.OrderVM
+
+<form method="post">
+	<input asp-for="OrderProduct.Id" hidden />
+	<br />
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-light ml-0">
+				<div class="container row">
+				<div class="col-12 d-none d-md-block col-md-6 pb-1">
+				  Order
+				</div>
+				<div class="col-12 col-md-4 offset-md-2 text-right">
+					<a asp-action="Index" class="btn text-white btn-outline-info form-control btn-sm">Siparişlerime Dön</a>
+				</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<div class="container rounded p-2">
+					<div class="row">
+						<div class="col-12 col-lg-6 pb-4">
+							<div class="row">
+								<h4 class="d-flex justify-content-between align-items-center mb-3">
+									<span class="text-primary">Alıcı Detayları:</span>
+								</h4>
+							</div>
+							<div class="row my-1">
+								<div class="col-3">Alıcı İsmi:</div>
+								<div class="col-9">
+									
+										<input asp-for="OrderProduct.Name" type="text" class="form-control" />						
+										
+								</div>
+							</div>
+							<div class="row my-1">
+								<div class="col-3">Telefon No:</div>
+								<div class="col-9">								
+										<input asp-for="OrderProduct.PhoneNo" type="text" class="form-control" />								
+								</div>
+							</div>
+							<div class="row my-1">
+								<div class="col-3">Adres:</div>
+								<div class="col-9">
+									
+										<input asp-for="OrderProduct.Address" type="text" class="form-control" />							
+								</div>
+							</div>
+							
+							<div class="row my-1">
+								<div class="col-3">Posta Kodu:</div>
+								<div class="col-9">
+									
+										<input asp-for="OrderProduct.PostalCode" type="text" class="form-control" />								
+								</div>
+							</div>
+						
+							<div class="row my-1">
+								<div class="col-3">Sipariş Tarihi:</div>
+								<div class="col-9">
+
+									<input value="@Model.OrderProduct.OrderData.ToShortDateString()" readonly type="text" class="form-control" />
+
+								</div>
+							</div>													
+						
+							<input type="submit" asp-action="UpdateOrderDetails" class="btn btn-primary form-control my-1" value="Alıcı Bilgilerini Güncelle" />
+
+						</div>
+						<div class="col-12 col-lg-5 offset-lg-1">
+							<h4 class="d-flex justify-content-between align-items-center mb-3">
+								<span class="text-primary">Sipariş Listesi </span>
+							</h4>
+							<label class="btn btn-outline-primary form-control my-2">Sipariş Durumu: - @Model.OrderProduct.OrderStatus</label>
+
+							<ul class="list-group mb-3">
+								@foreach (var detail in Model.OrderDetails)
+								{
+									<li class="list-group-item d-flex justify-content-between p-2">
+										<div class="row container">
+											<div class="col-8">
+
+												<h6 class="my-0 text-primary">@detail.Product.Name</h6>
+												<small class="text-muted">Fiyat (₺): @((detail.Price / detail.Count ).ToString("c"))</small><br />
+												<small class="text-muted">Quantity (Adet): @detail.Count</small>
+												<small class="text-muted">Quantity (Kg): @detail.Gram</small>
+											</div>
+											<div class="col-4 text-end">
+												<p class="text-success">@((detail.Price).ToString("c"))</p>
+											</div>
+										</div>
+									</li>
+								}
+								<li class="list-group-item bg-primary">
+									<div class="row container">
+										<div class="col-6">
+											<h5 class="text-white">Toplam Fiyat: </h5>
+										</div>
+										<div class="col-6 text-end">
+											<h5 class="text-white">@Model.OrderProduct.OrderPrice.ToString("c")</h5>
+										</div>
+									</div>
+								</li>
+							</ul>
+								@if (Model.OrderProduct.OrderStatus =="Ordered")
+								{
+									<input type="submit" asp-action="OrderDelivered" class="btn btn-primary form-control my-1" value="Delivered Order" />
+								}			
+								@if (Model.OrderProduct.OrderStatus != "Cancel" &&
+								Model.OrderProduct.OrderStatus!="Delivered")
+								{
+									<input type="submit" asp-action="OrderCancel" class="btn btn-danger form-control my-1" value="Cancel Order" />
+								}							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Product> 
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2>Aranan Sonuçlar</h2>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-bordered table-striped my-4">
+                <thead>
+                    <tr>
+                        <th>
+                            <h4>Ürün Resmi</h4>
+                        </th>
+                        <th>
+                            <h4>Ürün Adı</h4>                           
+                        </th>
+                        
+                        <th>
+                            <h4> Fiyatı</h4>
+                        </th>
+                        <th>
+                            <h4>Ürün QRCode</h4>
+                            
+                        </th>                        
+                    </tr>
+                </thead>
+
+                <tbody>
+                @foreach(var product in Model)
+                {
+                    <tr>
+                        <td><img src="@product.Picture" width="75px" /></td>
+                        <td><h5>@product.Name </h5></td>
+                        <td><h5>@product.Price ₺ </h5></td>
+                        <td><img src="@product.QRCode" width="75px" /></td>
+                    </tr>
+                    
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
